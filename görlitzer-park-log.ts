@@ -1,16 +1,16 @@
-export type RaccoonMeadowsVolunteers = {
+export type GörlitzerParkVolunteers = {
   id: number;
   name: string;
-  activities: RaccoonMeadowsActivity[];
+  activities: GörlitzerParkActivity[];
 };
 
-export type RaccoonMeadowsActivity = {
+export type GörlitzerParkActivity = {
   description: string;
   hours: number;
   verified: string;
 };
 
-export const raccoonMeadowsVolunteers = [
+export const görlitzerParkVolunteers = [
   {
     id: 100,
     name: 'Rose Sutton',

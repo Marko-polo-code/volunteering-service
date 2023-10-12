@@ -1,16 +1,16 @@
-export type WolfPointVolunteers = {
+export type KörnerParkVolunteers = {
   id: string;
   name: string;
-  activities: WolfPointActivity[];
+  activities: KörnerParkActivity[];
 };
 
-export type WolfPointActivity = {
+export type KörnerParkActivity = {
   notes: string;
   time: number;
   verified: boolean;
 };
 
-export const wolfPointVolunteers = [
+export const körnerParkVolunteers = [
   {
     id: '400sg',
     name: 'Sarah Galloway',

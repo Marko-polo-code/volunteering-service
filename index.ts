@@ -1,16 +1,16 @@
 import {
-  RaccoonMeadowsVolunteers,
-  RaccoonMeadowsActivity,
-  raccoonMeadowsVolunteers,
-} from "./raccoon-meadows-log";
+  GörlitzerParkVolunteers,
+  GörlitzerParkActivity,
+  görlitzerParkVolunteers,
+} from "./görlitzer-park-log";
 
 import {
-  WolfPointVolunteers,
-  WolfPointActivity,
-  wolfPointVolunteers,
-} from "./wolf-point-log";
+  KörnerParkVolunteers,
+  KörnerParkActivity,
+  körnerParkVolunteers,
+} from "./körner-park-log";
 
-type CombinedActivity = RaccoonMeadowsActivity | WolfPointActivity;
+type CombinedActivity = GörlitzerParkActivity | KörnerParkActivity;
 
 type Volunteers = {
   id: string | number;
@@ -19,7 +19,7 @@ type Volunteers = {
 };
 
 function combineVolunteers(
-  volunteers: (RaccoonMeadowsVolunteers | WolfPointVolunteers)[]
+  volunteers: (GörlitzerParkVolunteers | KörnerParkVolunteers)[]
 ) {
   return volunteers.map((volunteer) => {
     let id = volunteer.id;
@@ -74,7 +74,7 @@ function byHours(a, b) {
 }
 
 const combinedVolunteers = combineVolunteers(
-  [].concat(wolfPointVolunteers, raccoonMeadowsVolunteers)
+  [].concat(körnerParkVolunteers, görlitzerParkVolunteers)
 );
 
 const result = calculateHours(combinedVolunteers);
